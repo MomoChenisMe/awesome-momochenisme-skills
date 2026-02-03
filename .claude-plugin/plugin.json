@@ -1,0 +1,13 @@
+{
+  "name": "sync-scribe",
+  "version": "1.0.0",
+  "description": "Simplified note-taking and todo management for Claude. Auto-categorizes input as todos (actionable) or notes (informational). Supports CRUD operations.",
+  "author": {
+    "name": "MomoChenisMe",
+    "url": "https://github.com/MomoChenisMe"
+  },
+  "homepage": "https://github.com/MomoChenisMe/sync-scribe",
+  "repository": "https://github.com/MomoChenisMe/sync-scribe",
+  "license": "MIT",
+  "keywords": ["todo", "notes", "productivity", "task-management", "note-taking"]
+}
