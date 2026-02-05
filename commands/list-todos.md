@@ -1,3 +1,8 @@
+---
+name: list-todos
+description: 顯示所有待辦事項和已完成事項。使用方式：/list-todos [篩選關鍵字]
+---
+
 # List Todos
 
 Display all active and completed todos.

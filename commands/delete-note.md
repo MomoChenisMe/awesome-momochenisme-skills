@@ -1,3 +1,8 @@
+---
+name: delete-note
+description: 從 NOTES.md 刪除筆記。使用方式：/delete-note <標題關鍵字或日期>
+---
+
 # Delete Note
 
 Remove a note entry from NOTES.md.

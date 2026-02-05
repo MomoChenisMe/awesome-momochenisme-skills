@@ -1,3 +1,8 @@
+---
+name: add-note
+description: 儲存新筆記並自動分類。使用方式：/add-note <內容> [--category <分類>]
+---
+
 # Add Note
 
 Save a new note with automatic categorization.

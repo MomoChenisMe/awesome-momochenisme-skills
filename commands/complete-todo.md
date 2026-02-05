@@ -1,3 +1,8 @@
+---
+name: complete-todo
+description: 將待辦事項標記為已完成。使用方式：/complete-todo <任務關鍵字或編號>
+---
+
 # Complete Todo
 
 Mark a todo item as completed.

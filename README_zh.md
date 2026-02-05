@@ -1,13 +1,18 @@
 # Awesome MomoChenIsMe Skills
 
-專為 Claude Code 設計的技能集合，提升生產力與內容創作效率。
+專為 Claude Code 設計的技能集合，提升生產力、內容創作與開發工作流程效率。
 
 ## 技能總覽
 
 | 技能 | 說明 |
 |------|------|
 | **Sync Scribe** | 筆記與待辦事項管理 |
-| **MomoChenIsMe Writing Style** | 部落格寫作風格指南 |
+| **MomoChenIsMe Writing Style** | 部落格寫作風格指南（繁體中文）|
+| **Skill Creator** | Claude Code 技能開發指南 |
+| **Plugin Creator** | Claude Code 插件開發指南 |
+| **Claude Code CLI Guide** | Claude Code CLI 完整使用參考 |
+| **Gemini CLI Guide** | Gemini CLI 完整使用參考 |
+| **OpenSpec Guide** | 規範驅動開發工作流程框架 |
 
 ---
 
@@ -17,10 +22,10 @@
 
 ### 功能特色
 
-- 🎯 **自動分類**：自動判斷輸入是待辦事項（Todo）還是記事（Note）
-- ✅ **待辦管理**：新增、完成與刪除待辦事項
-- 📝 **分類記事**：自動將想法歸類至「工作」、「生活」或「未分類」
-- 🔍 **搜尋篩選**：依關鍵字或分類尋找項目
+- **自動分類**：自動判斷輸入是待辦事項（Todo）還是記事（Note）
+- **待辦管理**：新增、完成與刪除待辦事項
+- **分類記事**：自動將想法歸類至「工作」、「生活」或「未分類」
+- **搜尋篩選**：依關鍵字或分類尋找項目
 
 ### 使用方式
 
@@ -89,6 +94,196 @@
 
 ---
 
+## Skill Creator
+
+Claude Code 技能開發的完整指南。
+
+### 功能特色
+
+- **技能結構**：SKILL.md 架構、frontmatter 與內文撰寫指南
+- **資源打包**：Scripts、references 與 assets 的組織方式
+- **漸進式載入**：三層載入系統，有效管理 context
+- **最佳實踐**：精簡寫作、適當的自由度設定
+
+### 核心概念
+
+- **SKILL.md**：必要檔案，包含 YAML frontmatter（name、description）與 Markdown 內文
+- **scripts/**：可執行程式碼，用於確定性、重複性任務
+- **references/**：按需載入 context 的文件
+- **assets/**：用於輸出的檔案（模板、圖片、字型）
+
+### 工作流程
+
+1. 透過具體範例理解技能需求
+2. 規劃可重用內容（scripts、references、assets）
+3. 使用 `scripts/init_skill.py` 初始化
+4. 編輯 SKILL.md 並實作資源
+5. 使用 `scripts/package_skill.py` 打包
+6. 根據實際使用情況迭代改進
+
+---
+
+## Plugin Creator
+
+Claude Code 插件開發指南 - 可分發的套件，打包技能、hooks 與 MCP servers。
+
+### 功能特色
+
+- **插件結構**：目錄配置與 manifest 設定
+- **組件類型**：Commands、skills、hooks、MCP servers、LSP servers
+- **初始化腳本**：快速建立插件骨架
+- **測試指南**：本地插件載入與除錯
+
+### 何時使用 Plugin vs 獨立檔案
+
+| 使用情境 | 建議方式 |
+|----------|----------|
+| 僅限單一專案 | 放在 `.claude/` 目錄 |
+| 跨專案共用 | 建立 Plugin |
+| 分發給其他人 | 建立 Plugin |
+
+### 快速開始
+
+```bash
+# 建立新插件
+python skills/plugin-creator/scripts/init_plugin.py my-plugin
+
+# 測試本地插件
+claude --plugin-dir ./my-plugin
+```
+
+### 插件結構
+
+```
+my-plugin/
+├── .claude-plugin/
+│   └── plugin.json      # Manifest（必要）
+├── commands/            # 使用者可呼叫的技能
+├── skills/              # Agent 技能
+├── hooks/               # Hook 設定
+└── README.md
+```
+
+---
+
+## Claude Code CLI Guide
+
+Claude Code CLI 命令與 flags 的完整參考。
+
+### 基本命令
+
+| 命令 | 說明 |
+|------|------|
+| `claude` | 啟動互動式 REPL |
+| `claude "query"` | 帶初始提示啟動 REPL |
+| `claude -p "query"` | 單次查詢模式（pipe/SDK 模式）|
+| `claude -c` | 繼續最近的對話 |
+| `claude -r <id>` | 恢復特定 session |
+| `claude config` | 設定管理 |
+| `claude mcp` | MCP server 設定 |
+| `claude update` | 更新至最新版本 |
+
+### 常用 Flags
+
+| Flag | 說明 |
+|------|------|
+| `-p, --print` | 單次查詢模式 |
+| `-c, --continue` | 繼續最近對話 |
+| `--model <name>` | 指定模型（opus/sonnet/haiku）|
+| `--output-format <fmt>` | 輸出格式（text/json/stream-json）|
+| `--max-turns <n>` | 限制 agent 回合數 |
+| `--verbose` | 詳細日誌 |
+
+### 參考文件
+
+- [commands.md](skills/claude-code-cli-guide/references/commands.md) - 所有命令說明
+- [flags.md](skills/claude-code-cli-guide/references/flags.md) - 依類別分類的 flags
+- [examples.md](skills/claude-code-cli-guide/references/examples.md) - 常見使用範例
+
+---
+
+## Gemini CLI Guide
+
+Gemini CLI 命令與設定的完整參考。
+
+### 基本命令
+
+| 命令 | 說明 |
+|------|------|
+| `gemini` | 啟動互動式 REPL |
+| `gemini "query"` | 帶初始提示啟動 REPL |
+| `gemini -p "query"` | 單次查詢模式（pipe 模式）|
+
+### 斜線指令
+
+| 指令 | 說明 |
+|------|------|
+| `/help` | 顯示所有可用指令 |
+| `/chat` | 開始新對話 |
+| `/resume` | 恢復先前的對話 |
+| `/save` | 儲存目前對話 |
+| `/memory` | 顯示記憶狀態 |
+
+### 常用 Flags
+
+| Flag | 說明 |
+|------|------|
+| `-p, --prompt` | 單次查詢模式 |
+| `-m, --model` | 指定模型 |
+| `-s, --sandbox` | 啟用沙箱模式 |
+| `--approval-mode` | 設定核准模式（default/auto_edit/plan/yolo）|
+| `--output-format` | 輸出格式（text/json/stream-json）|
+| `-d, --debug` | 啟用除錯模式 |
+
+### 參考文件
+
+- [commands.md](skills/gemini-cli-guide/references/commands.md) - 所有命令說明
+- [flags.md](skills/gemini-cli-guide/references/flags.md) - 依類別分類的 flags
+- [configuration.md](skills/gemini-cli-guide/references/configuration.md) - 設定與 MCP 配置
+- [examples.md](skills/gemini-cli-guide/references/examples.md) - 常見使用範例
+
+---
+
+## OpenSpec Guide
+
+輕量級規範驅動開發（SDD）框架，系統化管理變更。
+
+### 核心理念
+
+- **流動**而非僵化
+- **迭代**而非瀑布
+- **簡易**而非複雜
+
+### 文件結構
+
+```
+.openspec/changes/<change-id>/
+├── proposal.md      # Why & What
+├── specs/           # 需求規格（delta specs）
+├── design.md        # How
+└── tasks.md         # 實作檢查清單
+```
+
+### 命令
+
+| 命令 | 用途 |
+|------|------|
+| `/opsx:new` | 建立新變更 |
+| `/opsx:ff` | 快速生成所有文件 |
+| `/opsx:continue` | 繼續處理進行中的變更 |
+| `/opsx:apply` | 執行實作 |
+| `/opsx:verify` | 驗證是否符合規格 |
+| `/opsx:archive` | 歸檔已完成的變更 |
+| `/opsx:explore` | 探索模式（不做修改）|
+
+### 標準工作流程
+
+```
+/opsx:new → /opsx:ff → /opsx:apply → /opsx:verify → /opsx:archive
+```
+
+---
+
 ## 安裝方式
 
 ```bash
@@ -99,7 +294,7 @@ claude --plugin-dir ./
 ## 檔案結構
 
 ```
-awesome-momo-skills/
+awesome-momochenisme-skills/
 ├── README.md
 ├── README_zh.md
 ├── .claude-plugin/
@@ -115,10 +310,27 @@ awesome-momo-skills/
 └── skills/
     ├── sync-scribe/
     │   └── SKILL.md
-    └── momo-writing-style/
+    ├── momochenisme-writing-style/
+    │   ├── SKILL.md
+    │   └── references/
+    │       └── style-examples.md
+    ├── skill-creator/
+    │   ├── SKILL.md
+    │   ├── scripts/
+    │   └── references/
+    ├── plugin-creator/
+    │   ├── SKILL.md
+    │   ├── scripts/
+    │   └── references/
+    ├── claude-code-cli-guide/
+    │   ├── SKILL.md
+    │   └── references/
+    ├── gemini-cli-guide/
+    │   ├── SKILL.md
+    │   └── references/
+    └── openspec-guide/
         ├── SKILL.md
         └── references/
-            └── style-examples.md
 ```
 
 ## 授權

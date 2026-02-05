@@ -1,3 +1,8 @@
+---
+name: list-notes
+description: 顯示所有筆記，可按分類或關鍵字篩選。使用方式：/list-notes [分類|關鍵字]
+---
+
 # List Notes
 
 Display all notes, optionally filtered by category or keyword.

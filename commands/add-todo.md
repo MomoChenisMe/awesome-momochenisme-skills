@@ -1,3 +1,8 @@
+---
+name: add-todo
+description: 新增待辦事項到清單。使用方式：/add-todo <任務描述>
+---
+
 # Add Todo
 
 Add a new task to the todo list.

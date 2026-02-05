@@ -1,13 +1,23 @@
 {
-  "name": "sync-scribe",
-  "version": "1.0.0",
-  "description": "Simplified note-taking and todo management for Claude. Auto-categorizes input as todos (actionable) or notes (informational). Supports CRUD operations.",
+  "name": "awesome-momochenisme-skills",
+  "version": "1.1.0",
+  "description": "MomoChenIsMe 的 Claude Code 技能與命令集合，包含筆記管理、技能/插件創建指南、Claude Code CLI 指南、Gemini CLI 指南、OpenSpec 工作流、以及個人寫作風格模擬。",
   "author": {
     "name": "MomoChenisMe",
     "url": "https://github.com/MomoChenisMe"
   },
-  "homepage": "https://github.com/MomoChenisMe/sync-scribe",
-  "repository": "https://github.com/MomoChenisMe/sync-scribe",
+  "homepage": "https://github.com/MomoChenisMe/awesome-momochenisme-skills",
+  "repository": "https://github.com/MomoChenisMe/awesome-momochenisme-skills",
   "license": "MIT",
-  "keywords": ["todo", "notes", "productivity", "task-management", "note-taking"]
+  "keywords": [
+    "claude-code",
+    "gemini-cli",
+    "skills",
+    "plugins",
+    "todo",
+    "notes",
+    "cli-guide",
+    "openspec",
+    "writing-style"
+  ]
 }

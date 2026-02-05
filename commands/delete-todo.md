@@ -1,3 +1,8 @@
+---
+name: delete-todo
+description: 從清單中刪除待辦事項。使用方式：/delete-todo <任務關鍵字或編號>
+---
+
 # Delete Todo
 
 Remove a todo item from the list.
