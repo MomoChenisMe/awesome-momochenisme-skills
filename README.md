@@ -94,6 +94,8 @@ Trigger naturally by asking Claude:
 
 ## Skill Creator
 
+> Source: [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
+
 A comprehensive guide for creating effective Claude Code skills.
 
 ### Features

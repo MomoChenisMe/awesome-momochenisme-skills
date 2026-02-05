@@ -423,3 +423,5 @@ db.once('open', () => {
 ```markdown
 標籤：azure, openai, gpt, ai, enterprise
 ```
+請安裝以下所有的技能到工作區：
+

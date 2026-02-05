@@ -96,6 +96,8 @@
 
 ## Skill Creator
 
+> 來源：[anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
+
 Claude Code 技能開發的完整指南。
 
 ### 功能特色
