@@ -286,6 +286,14 @@ Gemini CLI 命令與設定的完整參考。
 
 ---
 
+## 其他推薦技能
+
+精選社群中好用的 Claude Code 技能。
+
+👉 [查看完整清單](skills/RECOMMENDED_SKILLS_zh.md)
+
+---
+
 ## 安裝方式
 
 ```bash
@@ -310,6 +318,8 @@ awesome-momochenisme-skills/
 │   ├── list-notes.md
 │   └── delete-note.md
 └── skills/
+    ├── RECOMMENDED_SKILLS.md
+    ├── RECOMMENDED_SKILLS_zh.md
     ├── sync-scribe/
     │   └── SKILL.md
     ├── momochenisme-writing-style/

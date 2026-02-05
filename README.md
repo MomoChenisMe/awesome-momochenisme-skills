@@ -284,6 +284,14 @@ A lightweight Spec-Driven Development (SDD) framework for managing changes syste
 
 ---
 
+## Other Recommended Skills
+
+A curated list of useful Claude Code skills from the community.
+
+👉 [View Full List](skills/RECOMMENDED_SKILLS.md)
+
+---
+
 ## Installation
 
 ```bash
@@ -308,6 +316,8 @@ awesome-momochenisme-skills/
 │   ├── list-notes.md
 │   └── delete-note.md
 └── skills/
+    ├── RECOMMENDED_SKILLS.md
+    ├── RECOMMENDED_SKILLS_zh.md
     ├── sync-scribe/
     │   └── SKILL.md
     ├── momochenisme-writing-style/
