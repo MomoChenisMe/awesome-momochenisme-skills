@@ -13,6 +13,7 @@ A collection of Claude Code skills for productivity, content creation, and devel
 | **Skill Creator** | Guide for creating effective Claude Code skills |
 | **Plugin Creator** | Guide for creating Claude Code plugins |
 | **Claude Code CLI Guide** | Complete CLI usage reference |
+| **OpenSpec Workflow** | Spec-driven development workflow methodology and decision framework |
 | **Gemini CLI Guide** | Complete Gemini CLI usage reference |
 
 ---
@@ -313,11 +314,33 @@ Complete reference for Gemini CLI commands and configuration.
 
 ---
 
+## OpenSpec Workflow
+
+A spec-driven collaborative development workflow framework. Guides you through the right workflow based on requirement clarity and scope.
+
+### Key Concepts
+
+- **Workflow Selection**: Decision tree to choose between Quick Feature, Exploratory, or Parallel Changes workflows
+- **Artifact Generation Strategy**: One-shot vs step-by-step artifact creation based on complexity
+- **Change Lifecycle**: Proposal → Delta Specs → Design → Tasks → Implement → Verify → Archive
+- **Verification Dimensions**: Completeness, Correctness, Coherence
+- **Update vs Restart**: When to refine an existing change vs start fresh
+
+### Usage
+
+Trigger naturally by asking Claude:
+
+- "I want to plan a new feature using OpenSpec"
+- "Should I use quick feature or exploratory workflow?"
+- "Help me write a proposal for this change"
+
+---
+
 ## Other Recommended Skills
 
 A curated list of useful Claude Code skills from the community.
 
-- [View Full List](skills/RECOMMENDED_SKILLS.md)
+- [View Full List](RECOMMENDED_SKILLS.md)
 
 ---
 
@@ -334,6 +357,8 @@ claude --plugin-dir ./
 awesome-momochenisme-skills/
 ├── README.md
 ├── README_zh.md
+├── RECOMMENDED_SKILLS.md
+├── RECOMMENDED_SKILLS_zh.md
 ├── .gitignore
 ├── .claude-plugin/
 │   └── plugin.json
@@ -346,8 +371,6 @@ awesome-momochenisme-skills/
 │   ├── list-notes.md
 │   └── delete-note.md
 └── skills/
-    ├── RECOMMENDED_SKILLS.md
-    ├── RECOMMENDED_SKILLS_zh.md
     ├── sync-scribe/
     │   └── SKILL.md
     ├── momochenisme-writing-style/
@@ -360,6 +383,9 @@ awesome-momochenisme-skills/
     │   ├── SKILL.md
     │   ├── scripts/
     │   └── data/
+    ├── openspec-workflow/
+    │   ├── SKILL.md
+    │   └── references/
     ├── skill-creator/
     │   ├── SKILL.md
     │   ├── scripts/

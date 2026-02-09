@@ -13,6 +13,7 @@
 | **Skill Creator** | Claude Code 技能開發指南 |
 | **Plugin Creator** | Claude Code 插件開發指南 |
 | **Claude Code CLI Guide** | Claude Code CLI 完整使用參考 |
+| **OpenSpec Workflow** | 以規格驅動的開發工作流程方法論與決策框架 |
 | **Gemini CLI Guide** | Gemini CLI 完整使用參考 |
 
 ---
@@ -313,11 +314,33 @@ Gemini CLI 命令與設定的完整參考。
 
 ---
 
+## OpenSpec Workflow
+
+以規格為核心的協作開發工作流程框架，在寫程式之前先對齊需求。
+
+### 功能特色
+
+- **工作流程選擇**：決策樹引導選擇 Quick Feature、Exploratory 或 Parallel Changes 工作流程
+- **Artifact 生成策略**：依複雜度選擇一次產出或逐步產出
+- **變更生命週期**：提案 → 差異規格 → 設計 → 任務 → 實作 → 驗證 → 歸檔
+- **驗證三維度**：完整性、正確性、一致性
+- **更新 vs 重新開始**：何時微調既有變更、何時另起爐灶
+
+### 使用方式
+
+自然語言觸發，例如：
+
+- 「我想用 OpenSpec 規劃一個新功能」
+- 「這個需求該用快速流程還是探索流程？」
+- 「幫我寫這個變更的 proposal」
+
+---
+
 ## 其他推薦技能
 
 精選社群中好用的 Claude Code 技能。
 
-- [查看完整清單](skills/RECOMMENDED_SKILLS_zh.md)
+- [查看完整清單](RECOMMENDED_SKILLS_zh.md)
 
 ---
 
@@ -334,6 +357,8 @@ claude --plugin-dir ./
 awesome-momochenisme-skills/
 ├── README.md
 ├── README_zh.md
+├── RECOMMENDED_SKILLS.md
+├── RECOMMENDED_SKILLS_zh.md
 ├── .gitignore
 ├── .claude-plugin/
 │   └── plugin.json
@@ -346,8 +371,6 @@ awesome-momochenisme-skills/
 │   ├── list-notes.md
 │   └── delete-note.md
 └── skills/
-    ├── RECOMMENDED_SKILLS.md
-    ├── RECOMMENDED_SKILLS_zh.md
     ├── sync-scribe/
     │   └── SKILL.md
     ├── momochenisme-writing-style/
@@ -360,6 +383,9 @@ awesome-momochenisme-skills/
     │   ├── SKILL.md
     │   ├── scripts/
     │   └── data/
+    ├── openspec-workflow/
+    │   ├── SKILL.md
+    │   └── references/
     ├── skill-creator/
     │   ├── SKILL.md
     │   ├── scripts/
