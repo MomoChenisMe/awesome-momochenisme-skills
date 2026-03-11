@@ -1,6 +1,6 @@
 ---
 name: conventional-commit
-description: Write git commit messages following the Conventional Commits v1.0.0 specification. Use when committing code changes, writing commit messages, reviewing commit message format, or when the user mentions conventional commits, commit message standards, semantic commit messages, or structured commit format. Supports type selection (feat, fix, build, chore, ci, docs, style, refactor, perf, test), optional scope, BREAKING CHANGE notation (! suffix and footer), multi-paragraph body, git trailer footers, and Semantic Versioning correlation.
+description: Write git commit messages following the Conventional Commits v1.0.0 specification. ALWAYS use this skill when committing code changes, writing commit messages, reviewing or validating commit message format — even when the user simply asks to "commit this" or "write a commit message" without explicitly mentioning conventional commits. Also triggers when the user mentions conventional commits, commit message standards, semantic commit messages, structured commit format, commit types (feat, fix, refactor, chore, etc.), commit scopes, BREAKING CHANGE notation, git trailers, or asks whether a commit message is valid. Supports type selection, optional scope, ! suffix and BREAKING CHANGE footer, multi-paragraph body, git trailer footers, and Semantic Versioning correlation.
 ---
 
 # Conventional Commit
@@ -157,6 +157,7 @@ Co-Authored-By: Bob <bob@example.com>
 6. **One logical change per commit**: Do not mix unrelated changes. If a commit touches authentication and also fixes a typo in an unrelated file, split them into two commits.
 7. **Blank line** between header and body, and between body and footers — this is required by the spec and by git tooling.
 8. **Wrap body text** at 72 characters per line for readability in terminal-based git tools.
+9. **Follow the project's language conventions** for description and body. Check the project's CLAUDE.md, existing commit history, or team guidelines to determine the expected language (e.g., English, Chinese, Japanese). When the project specifies a language, use it consistently in both the description and body — types, scopes, and footer tokens always remain in English.
 
 ## Examples
 
